@@ -10,7 +10,11 @@
 pnpm init
 # 等价于
 npm init -y
+# 在当前工作空间中安装本地子项目依赖，以在 core 包中安装 shared 包举例
+pnpm add shared --filter core -w
 ```
+
+> 注意：不加 -w 的话，会去官方仓库下载依赖
 
 ### typescript 配置
 
